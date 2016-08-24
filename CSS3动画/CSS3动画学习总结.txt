@@ -1,0 +1,5 @@
+animation:动画 指让网页元素动起来。
+
+animation-name:动画名称；     @keyframes  动画名称{ }
+
+animation

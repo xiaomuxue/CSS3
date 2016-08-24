@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS3的文本样式</title>
+    <style>
+	   /*引入外面的字体*/
+	    @font-face{
+		   font-family:yc;
+		   /*引入本地的字体，这个字体到时候也要一并上传到服务器*/
+		   src:url(MSNeoGothic.ttf);
+		}
+	
+       .p1{
+		   font-size:148px;
+		   /* 文字描边    厚度/宽度   颜色 */
+		   text-stroke:4px red;
+		   -webkit-text-stroke:4px red;
+		   -moz-text-stroke:4px red;
+		   -ms-text-stroke:4px red;
+		   /* direction :文字对齐 和 unicode-bidi 一起使用才可以有奇特的效果 */
+		   direction:rtl;      /* rtl代表向右对齐，单独用和css2的text-align:right是一样的效果 */
+		   
+		   /*unicode-bidi: 文字的顺序 */
+		   unicode-bidi:bidi-override;      /*你文字的顺序和你的direction一样*/
+		   font-family:yc;     /*给外面引入的字体重新命名*/
+		   /*文本阴影    x   y   阴影半径  颜色*/
+		   text-shadow:3px 3px 3px lime;
+		}
+		
+		.p2{
+		    font-size:48px;
+			width:200px;
+			height:200px;
+			border:1px solid red;
+			color:red;
+			font-weight:bold;
+			text-align:right;
+			font-family:"华文行楷";
+			/*以省略号的方式，隐藏多余的文本*/
+			/*white-space:nowrap;
+			overflow:hidden;
+			text-overflow:ellipsis;*/
+		}
+		
+    </style>
+</head>
+
+<body>
+   <p class="p1">源辰24班</p>
+   <p class="p2">源辰24班,源辰24班</p>
+</body>
+</html>

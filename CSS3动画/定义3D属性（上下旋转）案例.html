@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>定义3D属性（上下旋转）案例</title>
+<style>
+   body{
+      background:#eee;
+   }
+   .box{
+	  width:600px;
+	  height:400px;
+	  position:relative;
+	  margin:30px auto;
+	}
+	#imgs{
+	   width:600px;
+	   height:400px;
+	   position:relative;
+	   /* 设置3D样式 */
+	   transform-style:preserve-3d;
+	   -webkit-transform-style:preserve-3d;
+	   -moz-transform-style:preserve-3d;
+	   -ms-transform-style:preserve-3d;
+	   /* 3D视景距离 */
+	   perspective:1000px;
+	   -webkit-perspective:1000px;
+	   -moz-perspective:1000px;
+	   -ms-perspective:1000px;
+	}
+	#imgs img{
+	   width:600px;
+	   height:400px;
+	   position:absolute;
+	   left:0;
+	   top:0;
+	   transform-origin:bottom;
+	   -webkit-transform-origin:bottom;
+	   -moz-transform-origin:bottom;
+	   -ms-transform-origin:bottom;
+	   
+	   transform:rotateX(-180deg);
+	   -webkit-transform:rotateX(-180deg);
+	   -moz-transform:rotateX(-180deg);
+	   -ms-transform:rotateX(-180deg);
+	   opacity:0;
+	}
+	#prev,#next{
+	   width:50px;
+	   height:50px;
+	   border:1px solid #ccc;
+	   border-radius:25px;
+	   position:absolute;
+	   font-size:40px;
+	   line-height:50px;
+	   text-align:center;
+	   color:#000;
+	   top:150px;
+	}
+	.box a{
+	   text-decoration:none;
+	}
+	#prev{
+	   left:-100px;
+	}
+	#next{
+	   right:-100px;
+	}
+	
+	#imgs .show{
+	   -webkit-animation:bTt 1s ease-in;
+	   -webkit-transform:rotateX(0deg);
+	   opacity:1;
+	}
+	
+	#imgs .hide{
+	    -webkit-animation:tTb 1s ease-in;
+		-webkit-transform:rotateX(-180deg);
+		opacity:0;
+	}
+	
+	@keyframes bTt{
+	   0%{
+	      -webkit-transform:rotateX(180deg);
+		  opacity:0;
+	   }
+	   50%{
+	       -webkit-transform:rotateX(-20deg);
+		   opacity:1;
+		}
+	   66%{
+		   -webkit-transform:rotateX(14deg);
+		}
+	   74%{
+	      -webkit-transform:rotateX(-12deg);
+	   }
+	   80%{
+	      -webkit-transform:rotateX(10deg);
+	   }
+	   86%{
+	      -webkit-transform:rotateX(-8deg);
+	   }
+	   92%{
+		   -webkit-transform:rotateX(4deg);
+		}
+	   96%{
+	       -webkit-transform:rotateX(-2deg);
+	   }
+	   100%{
+	      -webkit-transform:rotateX(0deg);
+	   }
+	}
+	@-webkit-keyframes bTt{
+	   0%{
+	      -webkit-transform:rotateX(180deg);
+		  opacity:0;
+	   }
+	   50%{
+	       -webkit-transform:rotateX(-20deg);
+		   opacity:1;
+		}
+	   66%{
+		   -webkit-transform:rotateX(14deg);
+		}
+	   74%{
+	      -webkit-transform:rotateX(-12deg);
+	   }
+	   80%{
+	      -webkit-transform:rotateX(10deg);
+	   }
+	   86%{
+	      -webkit-transform:rotateX(-8deg);
+	   }
+	   92%{
+		   -webkit-transform:rotateX(4deg);
+		}
+	   96%{
+	       -webkit-transform:rotateX(-2deg);
+	   }
+	   100%{
+	      -webkit-transform:rotateX(0deg);
+	   }
+	}
+	@-moz-keyframes bTt{
+	   0%{
+	      -webkit-transform:rotateX(180deg);
+		  opacity:0;
+	   }
+	   50%{
+	       -webkit-transform:rotateX(-20deg);
+		   opacity:1;
+		}
+	   66%{
+		   -webkit-transform:rotateX(14deg);
+		}
+	   74%{
+	      -webkit-transform:rotateX(-12deg);
+	   }
+	   80%{
+	      -webkit-transform:rotateX(10deg);
+	   }
+	   86%{
+	      -webkit-transform:rotateX(-8deg);
+	   }
+	   92%{
+		   -webkit-transform:rotateX(4deg);
+		}
+	   96%{
+	       -webkit-transform:rotateX(-2deg);
+	   }
+	   100%{
+	      -webkit-transform:rotateX(0deg);
+	   }
+	}
+	@-ms-keyframes bTt{
+	   0%{
+	      -webkit-transform:rotateX(180deg);
+		  opacity:0;
+	   }
+	   50%{
+	       -webkit-transform:rotateX(-20deg);
+		   opacity:1;
+		}
+	   66%{
+		   -webkit-transform:rotateX(14deg);
+		}
+	   74%{
+	      -webkit-transform:rotateX(-12deg);
+	   }
+	   80%{
+	      -webkit-transform:rotateX(10deg);
+	   }
+	   86%{
+	      -webkit-transform:rotateX(-8deg);
+	   }
+	   92%{
+		   -webkit-transform:rotateX(4deg);
+		}
+	   96%{
+	       -webkit-transform:rotateX(-2deg);
+	   }
+	   100%{
+	      -webkit-transform:rotateX(0deg);
+	   }
+	}
+	
+	@keyframes tTb{
+	   0%{
+	      -webkit-transform:rotateX(0deg);
+		  opacity:1;
+	   }
+	   100%{
+	      -webkit-transform:rotateX(-180deg);
+		  opacity:0;
+	   }
+	}
+	@-webkit-keyframes tTb{
+	   0%{
+	      -webkit-transform:rotateX(0deg);
+		  opacity:1;
+	   }
+	   100%{
+	      -webkit-transform:rotateX(-180deg);
+		  opacity:0;
+	   }
+	}
+	@-moz-keyframes tTb{
+	   0%{
+	      -webkit-transform:rotateX(0deg);
+		  opacity:1;
+	   }
+	   100%{
+	      -webkit-transform:rotateX(-180deg);
+		  opacity:0;
+	   }
+	}
+	@-ms-keyframes tTb{
+	   0%{
+	      -webkit-transform:rotateX(0deg);
+		  opacity:1;
+	   }
+	   100%{
+	      -webkit-transform:rotateX(-180deg);
+		  opacity:0;
+	   }
+	}
+	
+</style>
+</head>
+
+<body>
+   <div class="box">
+      <a href="#" id="prev">&lt;</a>
+      <div id="imgs">
+         <img src="image/image10.jpg" alt="" class="show"/>
+         <img src="image/image13.jpg" alt="" />
+         <img src="image/image12.jpg" alt="" />
+         <img src="image/image14.jpg" alt="" />
+      </div>
+      <a href="#" id="next">&gt;</a>
+   </div>
+   
+   <script type="text/javascript">
+        var prev=document.getElementById("prev");
+		var next=document.getElementById("next");
+		var imgs=document.getElementsByTagName("img");
+		//记录索引
+		var index=0;
+		prev.onclick=function(){
+		    imgs[index].className="hide";
+			index--;
+			if(index<0){
+			    index=imgs.length-1;
+			}
+			imgs[index].className="show";
+		}
+		
+		next.onclick=function(){
+		    imgs[index].className="hide";
+			index++;
+			if(index==imgs.length){
+			    index=0;
+			}
+			imgs[index].className="show";
+		}
+   </script>
+   
+</body>
+</html>

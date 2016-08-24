@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS3动画小案例-1（小正方形围绕大正方形转）</title>
+    <style>
+	    #bigbox{
+		    width:400px;
+			height:400px;
+			border:5px solid #000;
+			position:relative;
+		}
+		.box{
+		    width:100px;
+			height:100px;
+			background:lime;
+			position:absolute;
+			left:0px;
+			top:0px;
+			animation:move 4s infinite linear;
+			-webkit-animation:move 4s infinite linear;
+			-moz-animation:move 4s infinite linear;
+			-ms-animation:move 4s infinite linear;
+		}
+		@keyframes move{
+		    0%{
+			   top:0px;
+			   left:0px;
+			}
+			25%{
+			   top:0px;
+			   left:300px;
+			   background:blue;
+			}
+			50%{
+			   top:300px;
+			   left:300px;
+			   background:red;
+			}
+			75%{
+			   top:300px;
+			   left:0px;
+			   background:#CF3;
+			}
+			100%{
+			   top:0px;
+			   left:0px;
+			}
+		}
+		@-webkit-keyframes move{
+		    0%{
+			   top:0px;
+			   left:0px;
+			}
+			25%{
+			   top:0px;
+			   left:300px;
+			   background:blue;
+			}
+			50%{
+			   top:300px;
+			   left:300px;
+			   background:red;
+			}
+			75%{
+			   top:300px;
+			   left:0px;
+			   background:#CF3;
+			}
+			100%{
+			   top:0px;
+			   left:0px;
+			}
+		}
+		@-moz-keyframes move{
+		    0%{
+			   top:0px;
+			   left:0px;
+			}
+			25%{
+			   top:0px;
+			   left:300px;
+			   background:blue;
+			}
+			50%{
+			   top:300px;
+			   left:300px;
+			   background:red;
+			}
+			75%{
+			   top:300px;
+			   left:0px;
+			   background:#CF3;
+			}
+			100%{
+			   top:0px;
+			   left:0px;
+			}
+		}
+		@-ms-keyframes move{
+		    0%{
+			   top:0px;
+			   left:0px;
+			}
+			25%{
+			   top:0px;
+			   left:300px;
+			   background:blue;
+			}
+			50%{
+			   top:300px;
+			   left:300px;
+			   background:red;
+			}
+			75%{
+			   top:300px;
+			   left:0px;
+			   background:#CF3;
+			}
+			100%{
+			   top:0px;
+			   left:0px;
+			}
+		}
+    </style>
+
+</head>
+
+<body>
+
+   <div id="bigbox">
+       <div class="box"></div>
+   </div>
+   
+</body>
+</html>

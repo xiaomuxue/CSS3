@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3动画案例-2（无缝滚动，一直动）</title>
+<style>
+    #box{
+	   width:500px;
+	   height:100px;
+	   border:1px solid #000;
+	   position:relative;
+	   margin:100px auto;
+	   overflow:hidden;
+	}
+	ul{
+	   position:absolute;
+	   left:0px;
+	   top:-16px;
+	   width:200%;
+	   padding:0px;
+	   animation:move 2s linear infinite;
+	   -webkit-animation:move 2s linear infinite;
+	   -moz-animation:move 2s linear infinite;
+	   -ms-animation:move 2s linear infinite;
+	}
+	@keyframes move{
+	   0%{
+	      left:0px;
+	   }
+	   100%{
+	      left:-500px;
+	   }
+	}
+	@-webkit-keyframes move{
+	   0%{
+	      left:0px;
+	   }
+	   100%{
+	      left:-500px;
+	   }
+	}
+	@-moz-keyframes move{
+	   0%{
+	      left:0px;
+	   }
+	   100%{
+	      left:-500px;
+	   }
+	}
+	@-ms-keyframes move{
+	   0%{
+	      left:0px;
+	   }
+	   100%{
+	      left:-500px;
+	   }
+	}
+	ul li{
+	   list-style:none;
+	   width:98px;
+	   height:98px;
+	   font:50px/98px "Verdana ", Geneva, sans-serif; 
+	   border:1px solid #fff;
+	   background:#000;
+	   color:#fff;
+	   text-align:center;
+	   float:left;
+	}
+	#box:hover ul{
+	   /* 暂停动画 */
+	   animation-play-state:paused;
+	   -ms-animation-play-state:paused;
+	   -moz-animation-play-state:paused;
+	   -webkit-animation-play-state:paused;
+	}
+</style>
+</head>
+
+<body>
+   <div id="box">
+      <ul>
+         <li>1</li>
+         <li>2</li>
+         <li>3</li>
+         <li>4</li>
+         <li>5</li>
+         <li>1</li>
+         <li>2</li>
+         <li>3</li>
+         <li>4</li>
+         <li>5</li>
+      </ul>
+   </div>
+</body>
+</html>

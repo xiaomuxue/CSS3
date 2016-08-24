@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>定义3D属性CSS3(3D旋转)</title>
+<style>
+   #imgs{
+       width:600px;
+	   height:400px;
+	   margin:30px auto;
+	   /* 定义3D属性 */
+	   transform-style:preserve-3d;
+	   -webkit-transform-style:preserve-3d;
+	   -moz-transform-style:preserve-3d;
+	   -ms-transform-style:preserve-3d;
+	   /* 设置视井 */
+	   perspective:1000px;
+	   -webkit-perspective:1000px;
+	   -moz-perspective:1000px;
+	   -ms-perspective:1000px;
+   }
+   #imgs img.one,#imgs img.two,#imgs img.three,#imgs img.four{
+       width:600px;
+	   height:400px;
+	   position:absolute;
+	   left:0px;
+	   top:0px;
+	   /* 3d旋转 */
+	   transform-origin:bottom;
+	   -webkit-transform-origin:bottom;
+	   -moz-transform-origin:bottom;
+	   -ms-transform-origin:bottom;
+	   transition:all 1s;
+	   -webkit-transition:all 1s;
+	   -moz-transition:all 1s;
+	   -ms-transition:all 1s;
+	   animation:move 7s ease infinite;
+	   -webkit-animation:move 7s ease infinite;
+	   -moz-animation:move 7s ease infinite;
+	   -ms-animation:move 7s ease infinite;
+   }
+   #imgs img.two{
+	   transition:all 4s;
+	   -webkit-transition:all 4s;
+	   -moz-transition:all 4s;
+	   -ms-transition:all 4s;
+   }
+  #imgs img.three{
+	   transition:all 8s;
+	   -webkit-transition:all 8s;
+	   -moz-transition:all 8s;
+	   -ms-transition:all 8s;
+   }
+   #imgs img.four{
+	   -webkit-transition:all 12s;
+   }
+   
+   #imgs:hover img{
+	   transform:rotateX(-180deg);
+	   -webkit-transform:rotateX(-180deg);
+	   -moz-transform:rotateX(-180deg);
+	   -ms-transform:rotateX(-180deg);
+	  
+	}
+	@keyframes move{
+	   0%{
+	      opacity:1;
+	   }
+	   25%{
+		   -webkit-transform:rotateY(30deg);
+		   opacity:0.75;
+		}
+		50%{
+		  -webkit-transform:rotateY(90deg);
+		   opacity:0.5;
+		}
+		75%{
+		   -webkit-transform:rotateY(130deg);
+		   opacity:0.25;
+		}
+		100%{
+		   -webkit-transform:rotateY(180deg);
+		   opacity:1;
+		}
+	}
+	@-webkit-keyframes move{
+	   0%{
+	      opacity:1;
+	   }
+	   25%{
+		   -webkit-transform:rotateY(30deg);
+		   opacity:0.75;
+		}
+		50%{
+		  -webkit-transform:rotateY(90deg);
+		   opacity:0.5;
+		}
+		75%{
+		   -webkit-transform:rotateY(130deg);
+		   opacity:0.25;
+		}
+		100%{
+		   -webkit-transform:rotateY(180deg);
+		   opacity:1;
+		}
+	}
+	@-moz-keyframes move{
+	   0%{
+	      opacity:1;
+	   }
+	   25%{
+		   -webkit-transform:rotateY(30deg);
+		   opacity:0.75;
+		}
+		50%{
+		  -webkit-transform:rotateY(90deg);
+		   opacity:0.5;
+		}
+		75%{
+		   -webkit-transform:rotateY(130deg);
+		   opacity:0.25;
+		}
+		100%{
+		   -webkit-transform:rotateY(180deg);
+		   opacity:1;
+		}
+	}
+	@-ms-keyframes move{
+	   0%{
+	      opacity:1;
+	   }
+	   25%{
+		   -webkit-transform:rotateY(30deg);
+		   opacity:0.75;
+		}
+		50%{
+		  -webkit-transform:rotateY(90deg);
+		   opacity:0.5;
+		}
+		75%{
+		   -webkit-transform:rotateY(130deg);
+		   opacity:0.25;
+		}
+		100%{
+		   -webkit-transform:rotateY(180deg);
+		   opacity:1;
+		}
+	}
+</style>
+</head>
+
+<body>
+  <div id="imgs">
+      <img src="image/image10.jpg" class="one"/>
+      <img src="image/image13.jpg" class="two"/>
+      <img src="image/image14.jpg" class="three"/>
+      <img src="image/image12.jpg" class="four"/>
+  </div>
+</body>
+</html>

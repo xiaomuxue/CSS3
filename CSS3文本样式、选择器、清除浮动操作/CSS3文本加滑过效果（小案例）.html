@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3文本加滑过效果（小案例）</title>
+<style>
+   body{
+      background:#000;
+	  text-align:center;
+	  font:bold 70px/200px "幼圆";
+	 
+   }
+   h1{
+	  display:inline-block;
+      color:rgba(255,255,255,.3);
+	  background-clip:text;
+	  -webkit-background-clip:text;
+	  background:linear-gradient(-30deg,rgba(255,255,255,0) 100px, rgba(255,255,255,.5) 180px, rgba(255,255,255,1) 240px, rgba(255,255,255,0) 300px) 40px 0 no-repeat;
+	  background:-webkit-linear-gradient(-30deg,rgba(255,255,255,0) 100px, rgba(255,255,255,.5) 180px, rgba(255,255,255,1) 240px, rgba(255,255,255,0) 300px) 40px 0 no-repeat;
+   }
+</style>
+</head>
+
+<body>
+   <h1>welcome iphone7</h1>
+   
+   <script type="text/javascript">
+       var h1=document.getElementsByTagName("h1")[0];
+	   var ileft=-700;
+	   var time=null;
+	   function toMove(){
+	       time=window.setInterval(function(){
+			    ileft+=10;
+				if(ileft==1000){
+				     ileft=-700;	
+			     }
+				 h1.style.backgroundPosition=ileft+"px 0px";
+			},20);
+	   }
+	   toMove();
+   </script>
+   
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3动画</title>
+<style>
+   .box{
+	   width:100px;
+	   height:100px;
+	   background:pink;
+	   margin-top:20px;
+	   /* animation:动画有两个必要的属性   name名字  完成时间 */
+	/*   -webkit-animation:move 2s;*/
+	   
+	  /* -webkit-animation:move 2s;*/
+	   /* 循环                            无限循环infinite */
+	   animation:move 4s ease-in infinite;
+	   -webkit-animation:move 4s ease-in infinite;
+	   -moz-animation:move 4s ease-in infinite;
+	   -ms-animation:move 4s ease-in infinite; 
+	}
+	@keyframes move{
+	   0%{
+		   width:100px;
+		}
+		20%{
+		   height:300px;
+		}
+		40%{
+		   opacity:0;
+		}
+		50%{
+		    width:500px;
+			opacity:1;
+		}
+	}
+	@-webkit-keyframes move{
+	   0%{
+		   width:100px;
+		}
+		20%{
+		   height:300px;
+		}
+		40%{
+		   opacity:0;
+		}
+		50%{
+		    width:500px;
+			opacity:1;
+		}
+	}
+	@-moz-keyframes move{
+	   0%{
+		   width:100px;
+		}
+		20%{
+		   height:300px;
+		}
+		40%{
+		   opacity:0;
+		}
+		50%{
+		    width:500px;
+			opacity:1;
+		}
+	}
+	@-ms-keyframes move{
+	   0%{
+		   width:100px;
+		}
+		20%{
+		   height:300px;
+		}
+		40%{
+		   opacity:0;
+		}
+		50%{
+		    width:500px;
+			opacity:1;
+		}
+	}
+</style>
+</head>
+
+<body>
+   <div class="box"></div>
+</body>
+</html>

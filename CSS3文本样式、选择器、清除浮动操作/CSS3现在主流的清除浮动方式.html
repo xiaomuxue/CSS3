@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS3现在主流的清除浮动方式</title>
+    <style>
+        .div1{
+		   float:left;
+		   width:200px;
+		   height:200px;
+		   border:1px solid red;
+		}
+		.div2{
+		   float:left;
+		   width:200px;
+		   height:200px;
+		   border:1px solid lime;
+		}
+		.box{
+		   border:1px solid black;
+		   zoom:1;      /* zoom:是IE的私有属性  用来清除浮动和清除margin所引起的空间塌陷（重叠） */
+		}
+		.box:after{      /*目前市面上主流的清除浮动是这样子的*/
+		   content:"";      /* 在它的后面设置一个空的内容，设置为块级的，然后再清除*/
+		   display:block;
+		   clear:both;
+		}
+		/*.box2{
+		   border:1px solid blue;
+		}*/
+    </style>
+</head>
+
+<body>
+   <div class="box">
+       <div class="div1">你是哈士奇么？</div>
+       <div class="div2">我不是，但是哈士奇真的好可爱哦！</div>
+   </div>
+ <!--  <div style="clear:both"></div>   这样是清除不了浮动的  -->
+   <div class="box2">什么？你居然不是，我居然认错了，~~~</div>
+</body>
+</html>
