@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS3边框的裁剪</title>
+    <style>
+       .box{
+          width:300px;
+          height:300px;
+          background:url(hashiqi.jpg);
+          border:30px solid rgba(0,0,0,.5);
+          padding:50px;
+         /* background-clip:content-box;*/          /* background-clip:边框裁剪  默认取值为border-box */
+          /* background-clip:padding-box;*/
+		   background-clip:border-box;
+		  
+		  
+         /* background-clip有三个取值：
+              content-box:表示从内容开始截取
+              border-box:默认取值
+              padding-box:表示从内边距开始截取
+              */  
+       }
+       .box2{
+           width:300px;
+           height:300px;
+           background:url(lyf.jpeg);
+           border:30px solid rgba(0,0,0,.5);     /*给它的边框设个透明度*/
+           padding:50px;
+		   /*   加粗 大小   行高    字体  */
+           font:bold 120px/150px "微软雅黑";
+           /*文字填充*/
+           background-clip:text;        /*  说明是文本的裁剪 */
+           -webkit-background-clip:text;
+           text-algin:center;
+           color:rgba(0,0,0,0);       /* 黑色全透明 */
+		   transition:1s;
+		   -webkit-transition:1s;
+        }
+		.box2:hover{
+		    background-position:-600px -200px;
+		}
+		.box3{
+		    width:300px;
+			height:300px;
+			background:-webkit-linear-gradient(-30deg,rbga(0,0,0,1) 100px, rbga(0,0,0,0) 180px, rbga(0,0,0,0) 240px, rbga(0,0,0,1) 300px) 40px 0 no-repeat;      
+			/* 线性渐变 */
+		}
+    </style>
+</head>
+
+<body>
+   <div class="box">aaaaa</div>
+   <div class="box1">小慕雪甜品</div>
+   <div class="box2">小慕雪甜品1</div>
+</body>
+</html>

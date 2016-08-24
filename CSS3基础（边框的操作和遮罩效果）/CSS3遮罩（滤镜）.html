@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3遮罩（滤镜）</title>
+<style>
+   .box{
+	   width:800px;
+	   height:600px;
+	   background:url(lyf.jpeg) no-repeat;
+	   background-size:100% 100%;
+	   /*遮罩效果*/
+	   mask:url(mask.png) no-repeat;
+	   -webkit-mask:url(mask.png) no-repeat;
+	   transition:1s;
+	   -webkit-transition:1s;
+	}
+	.box:hover{
+	   -webkit-mask-position:100% 100%;
+	}
+</style>
+</head>
+
+<body>
+   <div class="box"></div>
+</body>
+</html>

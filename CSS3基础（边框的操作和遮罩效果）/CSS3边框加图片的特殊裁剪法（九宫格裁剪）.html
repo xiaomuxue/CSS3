@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3边框加图片的特殊裁剪法（九宫格裁剪）</title>
+<style>
+   .box{
+       width:100px;
+	   height:100px;
+	   border-width:20px;
+	   /* 边框的背景图片 */
+	   /*border-image:url(border.png) 27 27 round stretch;
+	   -webkit-border-image:url(border.png) 27 27 round stretch;
+	   -moz-border-image:url(border.png) 27 27 round stretch;*/
+	   
+	   
+	   /* 边框的背景图片另一种玩法 */
+	   border-image:url(border.png) 27/27px round;
+	   -webkit-border-image:url(border.png) 27/27px round;
+	   -moz-border-image:url(border.png) 27/27px round;
+   }
+   
+    /*  border-image  属性是一个简写属性，用于设置以下属性：
+	  border-image-source    用在边框的图片的路径。
+	  border-image-slice    图片边框向内偏移。
+	  border-image-width    图片边框的宽度。
+	  border-image-outset    边框图像区域超出边框的量
+	  border-image-repeat     平铺（repeat）、铺满（round）或拉伸（stretch）。
+   
+   */
+</style>
+</head>
+
+<body>
+   <div class="box"></div>
+</body>
+</html>
