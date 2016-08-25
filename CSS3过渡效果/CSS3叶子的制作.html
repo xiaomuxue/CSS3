@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3叶子的制作</title>
+<style>
+   .box{
+	  width:600px;
+	  height:600px;
+	  margin:50px auto;
+	  transition:all ease 0.9s;
+	  -webkit-transition:all ease 0.9s;
+	  -moz-transition:all ease 0.9s;
+	  -ms-transition:all ease 0.9s;
+	}
+	.box:hover{
+	   transform:rotate(720deg);
+	   -webkit-transform:rotate(720deg);
+	   -moz-transform:rotate(720deg);
+	   -ms-transform:rotate(720deg);
+	}
+   div{
+      width:200px;
+	  height:200px;
+	  float:left;
+	  margin:5px;
+   }
+   body div:nth-child(1){
+      background-color:lime;
+	  border-radius:0% 80%;
+   }
+   body div:nth-child(2){
+      background-color:red;
+	  border-radius:80% 0%;
+   }
+   body div:nth-child(3){
+      background-color:blue;
+	  border-radius:80% 0%;
+   }
+   body div:nth-child(4){
+      background-color:pink;
+	  border-radius:0% 80%;
+   }
+  
+</style>
+</head>
+
+<body>
+  <div class="box">
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+  </div>
+</body>
+</html>

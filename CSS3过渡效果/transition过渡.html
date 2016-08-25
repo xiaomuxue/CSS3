@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS3过渡效果（transition）的使用</title>
+    <style>
+       div{
+          width:400px;
+          height:400px;
+          background-color:red;
+          margin:0px auto;
+          /* 这个默认的是all hover里面所有的都参与过渡效果*/
+         /* transition:1s;
+          -webkit-transition:1s;   */        /* transition过渡直接放在div里面和放在hover里面的效果不一样 */
+         /* -webkit-transition:background-color 3s,width 3s;  */  /*这个参与过渡的效果只有背景色和宽度*/
+         -webkit-transition:background-color 3s 2s;      /* 延迟2秒再变*/
+         /* 先改变颜色， 再改变高度， 再改变宽度 */
+         -webkit-transition:background 2s,height 2s 2s,width 2s 4s;        /* 延迟要累加 */
+       }
+       div:hover{
+          width:800px;
+          height:800px;
+          background-color:#60F;
+       }
+    </style>
+</head>
+
+<body>
+   <div></div>
+</body>
+</html>

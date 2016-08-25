@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>案例（图片由一个点飞出去）</title>
+    <style>
+	    body{
+		   background:#f9f9f9;
+		}
+		#menu{
+		   width:50px;
+		   height:50px;
+		   position:fixed;
+		   left:50%;
+		   top:50%;
+		}
+		#menu_list{
+		   position:relative;
+		   width:42px;
+		   height:42px;
+		}
+		#menu_list img{
+		   position:absolute;
+		   left:0px;
+		   top:0px;
+		}
+		#home{
+		   width:50px;
+		   height:50px;
+		   background:url(images/home.png) no-repeat;
+		   position:absolute;
+		   left:0px;
+		   top:0px;
+		   transition:1s;
+		   -webkit-transition:1s
+		   -moz-transition:1s;
+		}
+		
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <div id="menu_list">
+           <img src="images/clos.png"/>
+           <img src="images/full.png"/>
+           <img src="images/prev.png"/>
+           <img src="images/refresh.png"/>
+           <img src="images/open.png"/>
+        </div>
+        <div id="home"></div>
+    </div>
+    
+    <script type="text/javascript">
+        var oHome=document.getElementById("home");
+		var aImg=document.getElementById("menu_list").getElementsByTagName("img");
+		
+		var rTure=true;
+		var rDis=150;   //飞出去的距离路径(半径)    想要飞的远，值设大
+		
+		//点击旋转
+		oHome.onclick=function(){
+		   if(rTure){
+			   this.style.transform="rotate(-360deg)";
+		       this.style.WebkitTransform="rotate(-360deg)";
+			   this.style.MozTransform="rotate(-360deg)";
+			   //给每一个图片来添加飞行的距离（路径）
+			   for(var i=0;i<aImg.length;i++){
+				   //过渡完成的时间
+				   aImg[i].style.transition="0.5s "+(aImg.length-i-1)*100+"ms";
+				   aImg[i].style.WebkitTransition="0.5s "+(aImg.length-i-1)*100+"ms";
+				   aImg[i].style.MozTransition="0.5s "+(aImg.length-i-1)*100+"ms";
+				   //开始计算距离
+				   var oLT=ToLT(rDis,90/4*i);
+				   aImg[i].style.left=oLT.l+"px";
+				   aImg[i].style.top=oLT.t+"px";
+				   aImg[i].style.transform="rotate(-720deg)";
+				   aImg[i].style.WebkitTransform="rotate(-720deg)";
+				   aImg[i].style.MozTransform="rotate(-720deg)";
+				} 
+		   }else{
+			    this.style.transform="rotate(360deg)";
+		        this.style.WebkitTransform="rotate(360deg)";
+				this.style.MozTransform="rotate(360deg)";
+				for(var i=0;i<aImg.length;i++){
+			        aImg[i].style.left="0px";
+					aImg[i].style.top="0px";
+					aImg[i].style.transform="rotate(0deg)";
+					aImg[i].style.WebkitTransform="rotate(0deg)";
+					aImg[i].style.MozTransform="rotate(0deg)";
+				}
+		   }
+		   rTure=!rTure;
+		}
+		
+		//已经知道斜边和角度，求直角边， 用 sin 和 cos
+		function ToLT(rdis,iDeg){
+		     var oLetf=Math.round( Math.sin(iDeg/180*Math.PI)*rdis );
+			 var oTop=Math.round( Math.cos(iDeg/180*Math.PI )*rdis );
+			 return {l:oLetf,t:oTop};
+		}
+		
+    </script>
+    
+</body>
+</html>

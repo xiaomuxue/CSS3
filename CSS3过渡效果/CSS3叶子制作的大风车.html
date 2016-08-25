@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3叶子制作的大风车</title>
+<style>
+   .box{
+      width:400px;
+	  height:400px;
+	  margin:50px auto;
+	  transition:5s linear;
+	  -webkit-transition:5s linear;
+   }
+   .box div{
+      width:150px;
+	  height:150px;
+	  float:left;
+   }
+   .box div:nth-child(1){
+	 background-color:blue;
+     border-radius:0% 80%;
+   }
+   .box div:nth-child(2){
+	 background-color:pink;
+     border-radius:80% 0%;
+   }
+   .box div:nth-child(3){
+	 background-color:lime;
+     border-radius:80% 0%;
+   }
+   .box div:nth-child(4){
+	 background-color:red;
+     border-radius:0% 80%;
+   }
+   .box:hover{
+      transform:rotate(720deg);
+	  -webkit-transform:rotate(720deg);
+   }
+</style>
+</head>
+
+<body>
+   <div class="box">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+   </div>
+</body>
+</html>

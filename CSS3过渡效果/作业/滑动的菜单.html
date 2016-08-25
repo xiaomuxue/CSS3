@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>滑动的菜单</title>
+<style>
+   .box{
+       margin:0;
+	   padding:0;
+	   font-size:12px;
+	   list-style:none;
+	   width:120px;
+	   float:left;
+   }
+   li{
+      width:80px;
+	  height:20px;
+	  line-height:20px;
+	  margin:1px;
+	  bakground-color:#ccc;
+	  text-align:left;
+	  border-radius:0 10px 10px 0;
+	  border-left:3px solid #333;
+	  /* 鼠标离开时的过渡效果 */
+	  -webkit-transition:all 1s ease-out;
+	  -moz-transition:all 1s ease-out;
+	  -ms-transition:all 1s ease-out;      
+	  transition:all 1s ease-out;
+   }
+   li a{
+      display:block;
+	  text-decoration:none;
+	  font-size:12px;
+	  padding-left:5px;
+	  font-family:Arial;
+	  font-weight:bold;
+	  color:#666;
+   }
+   li:hover{
+      background-color:#f90;
+	  width:100px;
+	  /* 鼠标经过时的过渡效果 */
+	  -webkit-transition:all 200ms linear;
+	  -moz-transition:all 200ms linear;
+	  -ms-transition:all 200ms linear;
+	  transition:all 200ms linear;
+   }
+   li:hover a{
+      color:#fff;
+   }
+</style>
+</head>
+
+<body>
+   <ul class="box">
+      <li><a href="#">HTML5</a></li>
+      <li><a href="#">CSS3</a></li>
+      <li><a href="#">jQuery</a></li>
+      <li><a href="#">Ajax</a></li>
+      <li><a href="#">HTML5</a></li>
+      <li><a href="#">CSS3</a></li>
+      <li><a href="#">jQuery</a></li>
+      <li><a href="#">Ajax</a></li>
+   </ul>
+   <ul class="box">
+      <li><a href="#">HTML5</a></li>
+      <li><a href="#">CSS3</a></li>
+      <li><a href="#">jQuery</a></li>
+      <li><a href="#">Ajax</a></li>
+      <li><a href="#">HTML5</a></li>
+      <li><a href="#">CSS3</a></li>
+   </ul>
+   <ul class="box">
+      <li><a href="#">HTML5</a></li>
+      <li><a href="#">CSS3</a></li>
+      <li><a href="#">jQuery</a></li>
+      <li><a href="#">Ajax</a></li>
+   </ul>
+</body>
+</html>

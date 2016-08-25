@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3斜切的小案例（二）导航栏</title>
+<style>
+   ul{
+      list-style:none;
+	  padding:0px;
+	  margin:0px;
+   }
+   li{
+      float:left;
+	  width:140px;
+	  height:30px;
+	  text-align:center;
+	  line-height:30px;
+	  background-color:pink;
+	  border:1px solid #fff;
+	  /* 我们看到文字也被斜切了，所以，文字要切回来*/
+	  transform:skewX(30deg);
+	  -webkit-transform:skewX(30deg);
+	  -moz-transform:skewX(30deg);
+   }
+   a{
+      text-decoration:none;
+	  transform:skewX(-30deg);
+	  display:block;
+   }
+</style>
+
+</head>
+
+<body>
+   <ul>
+      <li><a href="">纯政有限集团</a></li>
+      <li><a href="">衡阳师范学院</a></li>
+      <li><a href="">源辰科技</a></li>
+      <li><a href="">天啦个撸</a></li>
+      <li><a href="">科技改变国家</a></li>
+   </ul>
+</body>
+</html>

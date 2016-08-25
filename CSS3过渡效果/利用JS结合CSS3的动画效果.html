@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>利用JS实现动画效果（添加事件和移出事件）</title>
+    <style>
+	   div{
+	      width:100px;
+		  height:100px;
+		  background-color:pink;
+		  transition:width 1s;
+	   }
+    </style>
+   
+</head>
+
+<body>
+   <div class="box">1111</div>
+   
+   <script type="text/javascript">
+       var box=document.getElementsByClassName("box")[0];
+	   box.onclick=function(){
+	       this.style.width=this.offsetWidth+100+"px";
+		   this.style.height=this.offsetHeight+100+"px";
+		   addEnd(box,end);
+	   }
+	   
+	   function addEnd(obj,fn){
+		   obj.addEventListener("webkitTransitionEnd",fn,false);   /* 兼容谷歌 */
+		   obj.addEventListener("transitionEnd",fn,false);     /* 兼容火狐 */
+		   
+		}
+		
+		//添加事件
+		/*addEnd(box,function(){
+		   this.style.width=this.offsetWidth+100+"px";       //使宽度无限加宽
+		   this.style.height=this.offsetHeight+100+"px";     
+		   // 过渡了多少属性，触发多少次
+		});*/
+		
+		//移出事件
+		function end(){
+		   this.style.width=this.offsetWidth+100+"px";
+		   removeEnd(this,end);
+		}
+		
+		function removeEnd(obj,fn){
+		   obj.removeEventListener("webkitTransitionEnd",fn,false);  /*  兼容谷歌*/ 
+		   obj.removeEventListener("transitionEnd",fn,false);     /* 兼容火狐 */
+		}
+		
+   </script>
+   
+</body>
+</html>

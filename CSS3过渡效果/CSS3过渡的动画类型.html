@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS3过渡的动画类型</title>
+    <style>
+        p{
+           width:150px;
+           height:40px;
+           margin:20px;
+           background-color:pink;
+        }
+        #p1:hover{
+           width:100%;
+           transition:width 3s linear;
+           -moz-transition:width 3s linear;
+           -webkit-transition:width 3s linear;
+        } 
+        #p2:hover{
+           width:100%;
+           transition:width 3s ease;
+           -moz-transition:width 3s ease;
+           -webkit-transition:width 3s ease;
+        } 
+        #p3:hover{
+           width:100%;
+           transition:width 3s ease-in;
+           -moz-transition:width 3s ease-in;
+           -webkit-transition:width 3s ease-in;
+        } 
+        #p4:hover{
+           width:100%;
+           transition:width 3s ease-out;
+           -moz-transition:width 3s ease-out;
+           -webkit-transition:width 3s ease-out;
+        }
+        #p5:hover{
+           width:100%;
+           transition:width 3s ease-in-out;
+           -moz-transition:width 3s ease-in-out;        /* moz:火狐的私有前缀 */
+           -webkit-transition:width 3s ease-in-out;     /* webkit：谷歌的私有前缀 */
+        }  
+        
+    </style>
+</head>
+
+<body>
+    <p id="p1">linear 线性均匀</p>
+    <p id="p2">ease 有慢到快再到慢</p>
+    <p id="p3">ease-in 由慢到快</p>
+    <p id="p4">ease-out 由快到慢(默认的值)</p>
+    <p id="p5">ease-in-out 由慢到快再到慢（与ease的表现形式有点不一样）</p>
+</body>
+</html>

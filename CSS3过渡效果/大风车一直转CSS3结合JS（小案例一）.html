@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>大风车一直转CSS3结合JS（小案例一）</title>
+    <style>
+	   .pinwheeel{
+		   width:140px;
+		   height:140px;
+		   transform-origin:69px 73px;
+		   -webkit-transform-origin:69px 73px;    /*指定风车扇叶变形的中心原点 */
+		   -moz-transform-origin:69px 73px;
+		   transition:all 3s linear;
+		   -webkit-transition:all 3s linear;
+		   -moz-transition:all 3s linear;
+		}
+		.pinwheel span{
+		    width:100px;
+			height:50px;
+			display:block;
+			opacity:0.6;
+			position:relative;
+			border-radius:25px;
+		}
+		.pinwheel .one{
+		    background-color:#f00;
+			top:48px;
+			left:38px;
+		}
+		.pinwheel .two{
+		    background-color:#00f;
+			-webkit-transform:rotate(120deg) skew(30deg);
+			top:18px;
+			left:5px;
+		}
+		.pinwheel .three{
+		    background-color:#060;
+			-webkit-transform:rotate(240deg) skew(30deg);
+			top:-72px;
+			left:5px;
+		}
+	/*	.pinwheel .point{
+		    position:relative;
+			top:-90px;
+			left:45px;
+		}*/
+		.tree{
+		    position:relative;
+			top:-78px;
+			left:65px;
+			border-radius:10px 10px 0 0;
+			height:200px;
+			width:10px;
+			background-color:#999;
+			background:-webkit-gradient(linear,left top, right top, from(#ffcc00), to(#cc0033));
+			z-index:-1;
+		}
+		.tree img{
+		    width:10px;
+		}
+		
+    </style>
+</head>
+
+<body>
+   <!-- 风车扇叶 -->
+   <div class="pinwheel">
+      <span class="one"></span>
+      <span class="two"></span>
+      <span class="three"></span>
+   </div>
+   <!-- 风车杆 -->
+   <div class="tree"></div>
+   
+   <script type="text/javascript">
+       var box=document.getElementsByClassName("pinwheel")[0];
+	   var i=1;
+	   box.onclick=function(){
+		  //alert("a");
+	      box.style.webkitTransform="rotate(360deg)";
+	   }
+	   
+	   addEnd(box,function(){
+	       i++;
+		   this.style.webkitTransform="rotate("+ (360*i) +"deg)";
+	   });
+	   
+	   function addEnd(obj,fn){
+	      obj.addEventListener("webkitTransitionEnd",fn,false);
+		  obj.addEventListener("transitionEnd",fn,false);     /* 兼容火狐 */
+	   }
+	   
+   </script>
+   
+</body>
+</html>

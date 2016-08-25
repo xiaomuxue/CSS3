@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>导航栏（案例）</title>
+    <style>
+       /*  左边的样式 Start */
+        #left{
+           width:200px;
+        }
+        #left span,#middle span,#right span{
+           display:block;
+           width:100px;
+           height:30px;
+           font-weight:bold;
+           text-align:center;
+           line-height:30px;
+           background-color:#E0E0E0;
+           border-radius:0 40px 40px 0;
+           margin:5px;
+           border-left:4px solid #000;
+		   -webkit-transition:all 1s ease-out;
+		  -moz-transition:all 1s ease-out;
+		  -ms-transition:all 1s ease-out;      
+		  transition:all 1s ease-out;
+        }
+        #left .one{
+           background:#A64DFF;
+        }
+        #left .three,#middle .mi-five{
+           background:#00DF70;
+        }
+        #left .five,#middle .mi-three,#right .ri-two{
+           background:#CFA0A0;
+        }
+        #left .seven,#middle .mi-one,#right .ri-four{
+           background:#61AFAF;
+        }
+        #left .one:hover,
+        #left .two:hover,
+        #left .three:hover,
+        #left .four:hover,
+        #left .five:hover,
+        #left .six:hover,
+        #left .seven:hover,
+        #left .eight:hover{
+           width:130px;
+           transition:width .5s linear;
+           -webkit-transition:width .5s linear;
+           background-color:#FC6;
+        }
+        /* 左边导航栏的 End */
+        
+        /* 中间的导航栏 Start */
+        #middle{
+           width:200px;
+           float:left;
+           position:absolute;
+           top:1px;
+           left:160px;
+        }
+        
+        #middle .mi-one:hover,
+        #middle .mi-two:hover,
+        #middle .mi-three:hover,
+        #middle .mi-four:hover,
+        #middle .mi-five:hover,
+        #middle .mi-six:hover{
+           width:130px;
+           transition:width .5s linear;
+           -webkit-transition:width .5s linear;
+           background-color:#FC6;
+        }
+        /* End */
+        
+        /* 右边的导航栏样式 Start */
+        #right{
+            width:200px;
+           float:left;
+           position:absolute;
+           top:1px;
+           left:310px;
+        }
+        
+        #right .ri-one:hover,
+        #right .ri-two:hover,
+        #right .ri-three:hover,
+        #right .ri-four:hover,
+        #right .ri-five:hover,
+        #right .ri-six:hover{
+           width:130px;
+           transition:width .5s linear;
+           -webkit-transition:width .5s linear;
+           background-color:#FC6;
+        }
+        /* End */
+    </style>
+</head>
+
+<body>
+   <!-- 左边导航栏 Start -->
+   <div id="left">
+       <span class="one">HTML5</span>
+       <span class="two">CSS3</span>
+       <span class="three">JQuery</span>
+       <span class="four">Ajax</span>
+       <span class="five">HTML5</span>
+       <span class="six">CSS3</span>
+       <span class="seven">JQuery</span>
+       <span class="eight">Ajax</span>
+   </div>
+   <!-- End -->
+   
+   <!-- 中间的导航栏 Start -->
+   <div id="middle">
+       <span class="mi-one">HTML5</span>
+       <span class="mi-two">CSS3</span>
+       <span class="mi-three">JQuery</span>
+       <span class="mi-four">Ajax</span>
+       <span class="mi-five">HTML5</span>
+       <span class="mi-six">CSS3</span>
+   </div>
+   <!-- End -->
+   
+   <!-- 右边的 Start -->
+   <div id="right">
+       <span class="ri-one">HTML5</span>
+       <span class="ri-two">CSS3</span>
+       <span class="ri-three">JQuery</span>
+       <span class="ri-four">Ajax</span>
+   </div>
+   <!-- End -->
+   
+</body>
+</html>

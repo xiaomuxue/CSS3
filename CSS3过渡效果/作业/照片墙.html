@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>照片墙</title>
+    <style>
+        *{margin:0 auto;padding:0px;}
+		body{
+		   background:url(images/bark.jpg) repeat;
+		}
+		.Pic img{
+		   display:block;
+		   width:200px;
+		   height:200px;
+		   border:5px solid #fff;
+		   border-bottom:14px solid #fff;
+		   float:left;
+		}
+		.Pic .one img{
+		   position:absolute;
+		   top:40px;
+		   left:50px;
+		   transform:rotate(30deg);
+		   -webkit-transform:rotate(30deg);
+		   transition:all 1s;
+		   -webkit-transition:all 1s;
+		}
+		.Pic .one img:hover{
+		    transform:scale(1.1);
+			-webkit-transform:scale(1.1);
+			box-shadow:0px 6px 3px 4px #ccc;
+			z-index:1;
+		}
+		.Pic .two img{
+		   position:absolute;
+		   top:40px;
+		   left:290px;
+		   transform:rotate(-30deg);
+		   -webkit-transform:rotate(-30deg);
+		   transition:all 1s;
+		   -webkit-transition:all 1s;
+		}
+		.Pic .two img:hover,.Pic .three img:hover{
+		    transform:scale(1.1);
+			-webkit-transform:scale(1.1);
+			box-shadow:0px 4px 1px 2px #666;
+			z-index:5;
+		}
+		.Pic .three img{
+		   position:absolute;
+		   top:40px;
+		   left:990px;
+		   transform:rotate(-60deg);
+		   -webkit-transform:rotate(-60deg);
+		   transition:all 1s;
+		   -webkit-transition:all 1s;
+		}
+		
+		.Pic .four img{
+		   position:absolute;
+		   top:40px;
+		   left:590px;
+		   transform:rotate(30deg);
+		   -webkit-transform:rotate(30deg);
+		   transition:all 1s;
+		   -webkit-transition:all 1s;
+		}
+		.Pic .four img:hover,.Pic .five:hover img,.Pic .eight:hover img{
+		    transform:scale(1.1);
+			-webkit-transform:scale(1.1);
+			box-shadow:0px 6px 3px 4px #ccc;
+			border-bottom:40px solid #fff;
+			z-index:5;
+		}
+		.Pic .five img{
+		   position:absolute;
+		   top:100px;
+		   left:790px;
+		   transform:rotate(60deg);
+		   -webkit-transform:rotate(60deg);
+		   transition:all 1s;
+		   -webkit-transition:all 1s;
+		}
+		.Pic .six img{
+		   position:absolute;
+		   top:340px;
+		   left:90px;
+		   transform:rotate(-30deg);
+		   -webkit-transform:rotate(-30deg);
+		   transition:all 1s;
+		   -webkit-transition:all 1s;
+		}
+		.Pic .six:hover img,.Pic .seven:hover img,.Pic .nine:hover img,.Pic .ten:hover img{
+		    transform:rotate(-10deg) scale(1.2);
+			-webkit-transform:rotate(-10deg) scale(1.2);
+			box-shadow:0px 6px 3px 4px #ccc;
+			z-index:5;
+		}
+		.Pic .seven img{
+		   position:absolute;
+		   top:390px;
+		   left:490px;
+		   transform:rotate(-20deg);
+		   -webkit-transform:rotate(-20deg);
+		   transition:all 1s;
+		   -webkit-transition:all 1s;
+		}
+		.Pic .eight img{
+		   position:absolute;
+		   top:340px;
+		   left:790px;
+		   /*transform:rotate(-40deg);
+		   -webkit-transform:rotate(-40deg);*/
+		   transition:all 1s;
+		   -webkit-transition:all 1s;
+		}
+		.Pic .nine img{
+		   position:absolute;
+		   top:440px;
+		   left:690px;
+		   transform:rotate(60deg);
+		   -webkit-transform:rotate(60deg);
+		   transition:all 1s;
+		   -webkit-transition:all 1s;
+		}
+		.Pic .ten img{
+		   position:absolute;
+		   top:200px;
+		   left:490px;
+		   transition:all 1s;
+		   -webkit-transition:all 1s;
+		}
+		.Pic .eleven:hover img,.Pic .twelve:hover img,.Pic .thirteen:hover img,.Pic .fourteen:hover img{
+		    transform:scale(-1.2);
+			-webkit-transform:scale(-1.2);
+			box-shadow:0px 6px 3px 4px #ccc;
+			z-index:5;
+		}
+		.Pic .eleven img{
+		   position:absolute;
+		   top:420px;
+		   left:990px;
+		   transform:rotate(20deg);
+		   -webkit-transform:rotate(20deg);
+		   transition:all 1s;
+		   -webkit-transition:all 1s;
+		}
+		.Pic .twelve img{
+		   position:absolute;
+		   top:180px;
+		   left:890px;
+		   transform:rotate(-20deg);
+		   -webkit-transform:rotate(-20deg);
+		   transition:all 1s;
+		   -webkit-transition:all 1s;
+		}
+		.Pic .thirteen img{
+		   position:absolute;
+		   top:360px;
+		   left:290px;
+		   transform:rotate(20deg);
+		   -webkit-transform:rotate(20deg);
+		   transition:all 1s;
+		   -webkit-transition:all 1s;
+		}
+		.Pic .fourteen img{
+		   position:absolute;
+		   top:140px;
+		   left:190px;
+		   transform:rotate(-10deg);
+		   -webkit-transform:rotate(-10deg);
+		   transition:all 1s;
+		   -webkit-transition:all 1s;
+		}
+		.Pic .fifteen img{
+		   position:absolute;
+		   top:300px;
+		   left:590px;
+		   transform:rotate(10deg);
+		   -webkit-transform:rotate(10deg);
+		   transition:all 1s;
+		   -webkit-transition:all 1s;
+		}
+		
+    </style>
+    
+</head>
+
+<body>
+   <div class="Pic">
+      <div class="one"><img src="images/image1.jpg" /></div>
+      <div class="two"><img src="images/image2.jpg" /></div>
+      <div class="three"><img src="images/image3.jpg" /></div>
+      <div class="four"><img src="images/image4.jpg" /></div>
+      <div class="five"><img src="images/image5.jpg" /></div>
+      <div class="six"><img src="images/image6.jpg" /></div>
+      <div class="seven"><img src="images/image7.jpg" /></div>
+      <div class="eight"><img src="images/image8.jpg" /></div>
+      <div class="nine"><img src="images/image9.jpg" /></div>
+      <div class="ten"><img src="images/image10.jpg" /></div>
+      <div class="eleven"><img src="images/image11.jpg" /></div>
+      <div class="twelve"><img src="images/image12.jpg" /></div>
+      <div class="thirteen"><img src="images/image13.jpg" /></div>
+      <div class="fourteen"><img src="images/image14.jpg" /></div>
+      <div class="fifteen"><img src="images/image15.jpg" /></div>
+   </div>
+</body>
+</html>
