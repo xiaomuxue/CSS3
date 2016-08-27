@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>遮罩效果作业</title>
+		<style>
+			*{
+				margin: 0 auto;
+				padding: 0;
+			}
+			.bigPic{
+				width: 100%;
+				height: 400px;
+				background: url(img/1.jpg) no-repeat;
+				background-size: 100% 100%;
+				-webkit-mask: url(img/mask.png) repeat -100px 0; 
+			}
+			.bottom{
+				width: 100%;
+				height: 76px;
+				background:url(img/scroll_bg.png) repeat-x;
+			}
+			.smailPic{
+				width: 50%;
+				height:100%;
+				
+			}
+			.smailPic img{
+				width:145px;
+				height:65px;
+				margin:5px;
+				float: left;
+			}
+			.smailPic img:nth-child(1){
+				border:1px solid darkorange;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="bigPic" id="bigPic">
+			
+		</div>
+		<div class="bottom">
+			<div class="smailPic" id="smailPic">
+				<img src="img/smail_1.gif" />
+				<img src="img/smail_2.gif" />
+				<img src="img/smail_3.gif" />
+				<img src="img/smail_4.gif" />
+			</div>
+		</div>
+		
+		<script>
+			var smailPic=document.getElementById("smailPic");
+			var sPics=smailPic.getElementsByTagName("img");
+			for(var i=0;i<sPics.length;i++){
+				(function(i){
+					sPics[i].addEventListener('click',function(){
+						var bigPic=document.getElementById("bigPic");
+						bigPic.style.backgroundImage="url(img/"+(i+1)+".jpg)";
+					},false);
+				})(i);
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* CSS Document */
+
+#box{
+		   position:absolute;
+		   top:40px;
+		 /*  border:1px solid lime;*/
+		}
+		.small-one,.small-two,.small-three,.small-four,.small-five{
+		   width:150px;
+		   height:70px;
+		   z-index:10;
+		   float:left;
+		   position:relative;
+		}
+		.small-one{
+			top:450px;
+			left:180px;
+		    /*background:url(img/smail_1.gif) no-repeat;*/
+		}
+		.small-two{
+			top:450px;
+			left:220px;
+		    /*background:url(img/smail_2.gif) no-repeat;*/
+		}
+		.small-three{
+			top:450px;
+			left:260px;
+		    background:url(img/smail_3.gif) no-repeat;
+		}
+		.small-four{
+			top:450px;
+			left:300px;
+		    /*background:url(img/smail_4.gif) no-repeat;*/
+		}
+		.small-five{
+			top:450px;
+			left:340px;
+		    /*background:url(img/smail_5.gif) no-repeat;*/
+		}
+		.small-one:hover,.small-two:hover,.small-three:hover,.small-four:hover,.small-five:hover{
+			width:146px;
+			height:66px;
+			z-index:10;
+			background:url(img/arrow_on.png) no-repeat center 0;
+		    border:2px solid orange;
+		}
+		  .one,.two,.three,.four,.five{
+			 width:1340px;
+		     height:400px;
+			 background-size:100% 100%;
+		     mask:url(img/mask.png) repeat;
+	         -webkit-mask:url(img/mask.png) repeat;
+	         transition:1s;
+	         -webkit-transition:1s;
+			 animation:start 3s ease-in 0s 1 normal;
+			 -webkit-animation:start 3s linear 0s 1 normal;
+			 -moz-animation:start 3s linear 0s 1 normal;
+			 -ms-animation:start 3s linear 0s 1 normal;
+			 -o-animation:start 3s linear 0s 1 normal;
+		}
+		 
+		@keyframes start{
+			 0%{
+					transform:none;
+					opacity:0;	
+			  }	
+			  50%{
+				  transform:none;
+				  opacity:0.5;
+				  transform:none;
+			  }
+			  100%{
+				  transform:none;
+				  opacity:1;
+				  }
+			}
+			-webkit-@keyframes start{
+				0%{
+					-webkit-transform:none;
+					opacity:0;	
+			  }	
+			  50%{
+				  -webkit-transform:none;
+				  opacity:0.5;
+				  transform:none;
+			  }
+			  100%{
+				   -webkit-transform:none;
+				  opacity:1;
+				  }
+			}
+			-moz-@keyframes start{
+				0%{
+					 -moz-transform:none;
+					opacity:0;	
+			  }	
+			  50%{
+				   -moz-transform:none;
+				  opacity:0.5;
+				  -moz-transform:none;
+			  }
+			  100%{
+				   -moz-transform:none;
+				  opacity:1;
+				  }
+			}
+			-ms-@keyframes start{
+				0%{
+					-ms-transform:none;
+					opacity:0;	
+			  }	
+			  50%{
+				  -ms-transform:none;
+				  opacity:0.5;
+				  -ms-transform:none;
+			  }
+			  100%{
+				  -ms-transform:none;
+				  opacity:1;
+				  }
+		  }
+        .one{
+		   display:none;
+		   background:url(img/1.jpg) no-repeat; 
+		}
+		.two{
+		   display:none;
+		   background:url(img/2.jpg) no-repeat;
+		}
+	    .three{
+		   display:none;
+		   background:url(img/3.jpg) no-repeat;
+		}
+		.four{
+		   display:none;
+		   background:url(img/4.jpg) no-repeat;
+		}
+		.five{
+		   display:none;
+		   background:url(img/5.jpg) no-repeat;
+		}
+
